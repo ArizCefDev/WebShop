@@ -1,0 +1,32 @@
+﻿@model DTO.DTOEntity.UserDTO
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_PageLayout.cshtml";
+}
+
+<div class="login">
+
+	<div class="main-agileits">
+		<div class="form-w3agile">
+			<h3>Register</h3>
+			<form method="post">
+				<div class="key">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<input type="text" asp-for="UserName"  placeholder="Username">
+					<div class="clearfix"></div>
+				</div>
+				<div class="key">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+					<input type="text" asp-for="Email" placeholder="Email">
+					<div class="clearfix"></div>
+				</div>
+				<div class="key">
+					<i class="fa fa-lock" aria-hidden="true"></i>
+					<input type="password" asp-for="Password" placeholder="Password">
+					<div class="clearfix"></div>
+				</div>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</div>
+</div>

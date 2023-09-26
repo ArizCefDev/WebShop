@@ -1,0 +1,119 @@
+﻿<!-- top-brands -->
+<div class="top-brands">
+	<div class="container">
+		<h3>Top Brands</h3>
+		<div class="sliderfig">
+			<ul id="flexiselDemo1">
+				<li>
+					<img src="~/WebTema/images/4.png" alt=" " class="img-responsive" />
+				</li>
+				<li>
+					<img src="~/WebTema/images/5.png" alt=" " class="img-responsive" />
+				</li>
+				<li>
+					<img src="~/WebTema/images/6.png" alt=" " class="img-responsive" />
+				</li>
+				<li>
+					<img src="~/WebTema/images/7.png" alt=" " class="img-responsive" />
+				</li>
+				<li>
+					<img src="~/WebTema/images/46.jpg" alt=" " class="img-responsive" />
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			$(window).load(function () {
+				$("#flexiselDemo1").flexisel({
+					visibleItems: 4,
+					animationSpeed: 1000,
+					autoPlay: false,
+					autoPlaySpeed: 3000,
+					pauseOnHover: true,
+					enableResponsiveBreakpoints: true,
+					responsiveBreakpoints: {
+						portrait: {
+							changePoint: 480,
+							visibleItems: 1
+						},
+						landscape: {
+							changePoint: 640,
+							visibleItems: 2
+						},
+						tablet: {
+							changePoint: 768,
+							visibleItems: 3
+						}
+					}
+				});
+
+			});
+		</script>
+		<script type="text/javascript" src="~/WebTema/js/jquery.flexisel.js"></script>
+	</div>
+</div>
+<!-- //top-brands -->
+<!-- //newsletter -->
+<div class="footer">
+	<div class="container">
+		<div class="col-md-3 footer-grids fgd1">
+			<a href="index.html"><img src="~/WebTema/images/logo2.png" alt=" " /><h3>FASHION<span>CLUB</span></h3></a>
+			<ul>
+				<li>Laçın Ticarət Mərkəzi,</li>
+				<li>Bakı şəhəri.</li>
+				<li><a href="mailto:info@example.com">info@example.com</a></li>
+				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+			</ul>
+		</div>
+		<div class="col-md-3 footer-grids fgd2">
+			<h4>Məlumat</h4>
+			<ul>
+				<li><a asp-controller="Contact" asp-action="Index">Bizimlə əlaqə</a></li>
+				<li><a asp-controller="About" asp-action="Index">Xəritə</a></li>
+				<li><a href="faq.html">FAQ's</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 footer-grids fgd3">
+			<h4>Mağaza</h4>
+			<ul>
+				<li><a href="jewellery.html">Cəvahirat</a></li>
+				<li><a href="cosmetics.html">Kosmetika</a></li>
+				<li><a href="Shoes.html">Ayaqqabı</a></li>
+				<li><a href="deos.html">Ətir</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 footer-grids fgd4">
+			<h4>Mənim profilim</h4>
+			<ul>
+
+				<li><a asp-controller="Login" asp-action="SignIn">Login</a></li>
+				<li><a asp-controller="Login" asp-action="SignUp">Register</a></li>
+				<li><a href="recommended.html">Tövsiyyə </a></li>
+				<li><a href="payment.html">Ödəniş</a></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+		<p class="copy-right">© 2016 Fashion Club . All rights reserved | Design by <a href="http://w3layouts.com"> W3layouts.</a></p>
+	</div>
+</div>
+<!-- cart-js -->
+<script src="~/WebTema/js/minicart.js"></script>
+<script>
+	w3ls1.render();
+
+	w3ls1.cart.on('w3sb1_checkout', function (evt) {
+		var items, len, i;
+
+		if (this.subtotal() > 0) {
+			items = this.items();
+
+			for (i = 0, len = items.length; i < len; i++) {
+				items[i].set('shipping', 0);
+				items[i].set('shipping2', 0);
+			}
+		}
+	});
+</script>
+<!-- //cart-js -->  
