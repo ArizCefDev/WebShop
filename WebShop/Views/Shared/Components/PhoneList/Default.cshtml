@@ -1,0 +1,8 @@
+﻿@model IEnumerable<DTO.DTOEntity.ContactDTO>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
+        <li>@item.PhoneOne</li>
+    }
+</ul>

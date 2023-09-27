@@ -4,10 +4,7 @@
 			<a asp-controller="Home" asp-action="Index"><img src="~/WebTema/images/logo2.png" alt=" " /><h1>FASHİON<span>CLUB</span>  </h1></a>
 		</div>
 		<div class="col-md-6 phone-w3l">
-			<ul>
-				<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
-				<li>+994XXXXXXXXX</li>
-			</ul>
+			@await Component.InvokeAsync("PhoneList")
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -54,8 +51,8 @@
 			});
 		</script>
 		<div class="col-md-4 search-agileinfo">
-			<form action="#" method="post">
-				<input type="search" name="Search" placeholder="Search for a Product..." required="">
+			<form asp-controller="Search" asp-action="Index" method="get">
+				<input type="search" name="product" placeholder="Məhsul axtar..." required="">
 				<button type="submit" class="btn btn-default search" aria-label="Left Align">
 					<i class="fa fa-search" aria-hidden="true"> </i>
 				</button>
