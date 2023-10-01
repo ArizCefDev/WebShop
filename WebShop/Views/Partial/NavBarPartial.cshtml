@@ -32,6 +32,10 @@
 						{
 							<li><a asp-controller="Admin" asp-action="Index" class="hyper"><span>Admin</span></a></li>
 						}
+						@if (User.IsInRole("User"))
+						{
+							<li><a asp-controller="Home" asp-action="Add" class="hyper"><span>+Yeni</span></a></li>
+						}
 					</ul>
 				</div>
 			</nav>

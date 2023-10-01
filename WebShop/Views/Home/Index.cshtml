@@ -33,11 +33,48 @@
 										</div>
 									</div>
 								</a>
-								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
-								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
-								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
-								<i class="fa fa-star gray-star" aria-hidden="true"></i>
-								<i class="fa fa-star gray-star" aria-hidden="true"></i>
+								@if (item.NumberCount==1)
+								{
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+								}
+								else if (item.NumberCount == 2)
+								{
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+								}
+								else if (item.NumberCount == 3)
+								{
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+								}
+								else if (item.NumberCount == 4)
+								{
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+								}
+								else if (item.NumberCount == 5)
+								{
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									
+								}
+
 								<h4>@item.Title</h4>
 								<h5>@item.Price azn</h5>
 							</div>

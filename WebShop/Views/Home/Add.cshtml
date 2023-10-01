@@ -1,0 +1,45 @@
+﻿@model DTO.DTOEntity.ProductDTO
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_PageLayout.cshtml";
+}
+
+<div class="login">
+
+	<div class="main-agileits">
+		<div class="form-w3agile">
+			<h3>Product Add</h3>
+			<form method="post">
+				<div class="key">
+					<input type="file"  placeholder="Foto">
+					<div class="clearfix"></div>
+				</div>
+				<div class="key">
+					<select asp-for="NumberCount" class="form-control">
+						<option>Number Count</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+					<div class="clearfix"></div>
+				</div>
+				<div class="key">
+					<input type="text" asp-for="Title" placeholder="Title">
+					<div class="clearfix"></div>
+				</div>
+				<div class="key">
+					<input type="text" asp-for="Price" placeholder="Price">
+					<div class="clearfix"></div>
+				</div>
+				<div class="key">
+					@Html.DropDownListFor(x=>x.CategoryID,(IEnumerable<SelectListItem>) ViewBag.c,new {@class="form-control"})
+
+				</div>
+				<input type="submit" value="Add">
+			</form>
+		</div>
+	</div>
+</div>
+

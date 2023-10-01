@@ -11,7 +11,7 @@
                 <div class="panel-heading">
                     Product table
                 </div>
-                <a href="" class="btn btn-primary">Yeni</a>
+                <a asp-controller="Admin" asp-action="Add" class="btn btn-primary">Yeni</a>
                 <div>
                     <table class="table" ui-jq="footable" ui-options='{
         "paging": {
@@ -30,8 +30,8 @@
                                 <th>NumberCount</th>
                                 <th>Title</th>
                                 <th>Price</th>
-                                <th>C_ID</th>
-                                <th>U_Id</th>
+                                <th>Category</th>
+                                <th>User</th>
                                 <th>Redakte</th>
                                 <th>Sil</th>
                             </tr>
@@ -45,13 +45,13 @@
                                     <td>@item.NumberCount</td>
                                     <td>@item.Title</td>
                                     <td>@item.Price</td>
-                                    <td>@item.CategoryID</td>
-                                    <td>@item.UserID</td>
+                                    <td>@item.CategoryName</td>
+                                    <td>@item.UserName</td>
                                     <td>
-                                        <a href="" class="btn btn-success">Redakte</a>
+                                        <a asp-controller="Admin" asp-action="Update" asp-route-id="@item.ID" class="btn btn-success">Redakte</a>
                                     </td>
                                     <td>
-                                        <a href="" class="btn btn-danger">Sil</a>
+                                        <a asp-controller="Admin" asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger">Sil</a>
                                     </td>
                                     
                                 </tr>

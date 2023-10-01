@@ -10,5 +10,6 @@ namespace Business.Abstract
 {
     public interface IProductService:IBaseService<ProductDTO,Product,ProductDTO>
     {
+       IEnumerable<ProductDTO> GetAllWithInclude();
     }
 }

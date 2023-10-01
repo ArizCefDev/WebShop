@@ -20,8 +20,11 @@ namespace DTO.DTOEntity
         public decimal Price { get; set; }
         public DateTime CreateDate { get; set; }
         public int CategoryID { get; set; }
+        public string CategoryName { get; set; }
         public CategoryDTO CategoryDTO { get; set; }
 		public int UserID { get; set; }
+		public string UserName { get; set; }
+
 		public UserDTO UserDTO { get; set; }
 
 	}

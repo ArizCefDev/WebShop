@@ -1,0 +1,70 @@
+﻿@model DTO.DTOEntity.ProductDTO
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section id="main-content">
+	<section class="wrapper">
+	<div class="form-w3layouts">
+        <!-- page start-->
+        <!-- page start-->
+        <div class="row">
+            <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Product Add Form
+                        </header>
+                        <div class="panel-body">
+                            <div class="position-center">
+                                <form role="form" method="post">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Foto</label>
+                                    <input type="file"  class="form-control" id="exampleInputEmail1">
+                                </div>
+                                <div class="form-group">
+                                        <label for="exampleInputEmail1">Number Count</label>
+                                        <select asp-for="NumberCount" class="form-control" id="exampleInputEmail1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Title</label>
+                                        <input type="text" asp-for="Title" class="form-control" id="exampleInputEmail1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Price</label>
+                                        <input type="text" asp-for="Price" class="form-control" id="exampleInputEmail1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Category</label>
+                                        @Html.DropDownListFor(x=>x.CategoryID,(IEnumerable<SelectListItem>) ViewBag.c,new {@class="form-control"})
+
+                                    </div>
+
+                                <button type="submit" class="btn btn-info">Submit</button>
+                            </form>
+                            </div>
+
+                        </div>
+                    </section>
+
+            </div>
+        </div>
+        <!-- page end-->
+        </div>
+</section>
+ <!-- footer -->
+		  <div class="footer">
+			<div class="wthree-copyright">
+			  <p>© 2017 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+			</div>
+		  </div>
+  <!-- / footer -->
+</section>
+

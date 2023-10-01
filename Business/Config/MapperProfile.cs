@@ -16,17 +16,19 @@ namespace Business.Config
             CreateMap<AboutDTO, About>();
             CreateMap<About,AboutDTO>();
 
-            CreateMap<CategoryDTO,CategoryDTO>();
+            CreateMap<CategoryDTO,Category>();
             CreateMap<Category,CategoryDTO>();
 
-            CreateMap<ContactDTO,ContactDTO>();
+            CreateMap<ContactDTO,Contact>();
             CreateMap<Contact,ContactDTO>();
 
             CreateMap<MessageDTO,Message>();
             CreateMap<Message,MessageDTO>();
 
-            CreateMap<ProductDTO,ProductDTO>();
-            CreateMap<Product,ProductDTO>();
+            CreateMap<ProductDTO,Product>();
+            CreateMap<Product,ProductDTO>()
+                .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(c => c.Category.Name))
+                .ForMember(dest => dest.UserName, opt => opt.MapFrom(c => c.User.UserName));
 
             CreateMap<RoleDTO,Role>();
             CreateMap<Role,RoleDTO>();
